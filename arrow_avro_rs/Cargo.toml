@@ -1,0 +1,17 @@
+[package]
+name = "arrow_avro_rs"
+authors = ["potter420"]
+description = "Read Avro File Into Arrow Struct Array"
+version = "0.1.0"
+edition = "2018"
+
+
+[dependencies]
+num = "^0.3"
+avro-rs = {version = "0.13", features=["snappy"]}
+arrow2 = {version = "0.1.0", git="https://github.com/jorgecarleitao/arrow2", rev="95fe10a9e4574046ac271c1e7279af2d8eea471a", default-features=false}
+thiserror = "1.0"
+
+
+[dev-dependencies]
+arrow2 = {version = "0.1.0", git="https://github.com/jorgecarleitao/arrow2", rev="95fe10a9e4574046ac271c1e7279af2d8eea471a", default-features=false, features = ["io_print"]}

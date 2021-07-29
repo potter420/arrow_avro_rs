@@ -1,0 +1,30 @@
+[package]
+name = "avro_arrow_rs_python"
+authors = ["potter420"]
+description = "Read Avro File Into Arrow Struct Array"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[workspace]
+# prevents package from thinking it's in the workspace
+
+[lib]
+name = "arrow_avro_rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = {version = "0.14", features = ["abi3-py36", "extension-module"] }
+arrow_avro_rs = {path = "../arrow_avro_rs" }
+arrow2 = {version = "0.1.0", git="https://github.com/jorgecarleitao/arrow2", rev="95fe10a9e4574046ac271c1e7279af2d8eea471a", default-features=false}
+thiserror = "1.0"
+
+
+[profile.release]
+codegen-units = 1
+debug = false
+incremental = false
+lto = "thin"
+opt-level = 3
+panic = "abort"
