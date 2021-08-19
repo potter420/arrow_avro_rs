@@ -17,7 +17,7 @@ crate-type = ["cdylib"]
 [dependencies]
 pyo3 = {version = "0.14", features = ["abi3-py36", "extension-module"] }
 arrow_avro_rs = {path = "../arrow_avro_rs" }
-arrow2 = {version = "0.1.0", git="https://github.com/jorgecarleitao/arrow2", rev="95fe10a9e4574046ac271c1e7279af2d8eea471a", default-features=false}
+arrow2 = {version = "0.3.0", default-features=false}
 thiserror = "1.0"
 
 
