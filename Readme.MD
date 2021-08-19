@@ -6,7 +6,7 @@ Currently, it only support flattened schema type.
 
 ## How it works:
 
-We use avro-rs to read the file, arrow2 to parse them into StructArray.
+We use [avro-rs](https://github.com/flavray/avro-rs) to read the file, [arrow2](https://github.com/jorgecarleitao/arrow2) to parse them into StructArray.
 The array then transfered to python via ffi and then convert into arrow Table
 
 
